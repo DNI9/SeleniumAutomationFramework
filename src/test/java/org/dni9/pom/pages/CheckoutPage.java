@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 
 public class CheckoutPage extends BasePage {
   private final By firstNameField = By.id("billing_first_name");
@@ -23,8 +22,8 @@ public class CheckoutPage extends BasePage {
   private final By passwordField = By.id("password");
   private final By loginBtn = By.name("login");
   private final By loadingOverlay = By.cssSelector(".blockUI.blockOverlay");
-  private final By countryDropDown = By.id("billing_country");
-  private final By stateDropDown = By.id("billing_state");
+  private final By countryDropDown = By.id("select2-billing_country-container");
+  private final By stateDropDown = By.id("select2-billing_state-container");
   private final By directBankTransferRadioBtn = By.id("payment_method_bacs");
 
   public CheckoutPage(WebDriver driver) {
@@ -46,8 +45,8 @@ public class CheckoutPage extends BasePage {
   }
 
   public CheckoutPage selectCountry(String country) {
-    Select select = new Select(driver.findElement(countryDropDown));
-    select.selectByVisibleText(country);
+    driver.findElement(countryDropDown).click();
+    waitShort.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='" + country + "']"))).click();
     return this;
   }
 
@@ -66,8 +65,8 @@ public class CheckoutPage extends BasePage {
   }
 
   public CheckoutPage selectState(String state) {
-    Select select = new Select(driver.findElement(stateDropDown));
-    select.selectByVisibleText(state);
+    driver.findElement(stateDropDown).click();
+    waitShort.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='" + state + "']"))).click();
     return this;
   }
 

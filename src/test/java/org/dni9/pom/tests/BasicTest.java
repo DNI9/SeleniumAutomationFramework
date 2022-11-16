@@ -1,4 +1,4 @@
-package org.dni9;
+package org.dni9.pom.tests;
 
 import org.dni9.pom.base.BaseTest;
 import org.dni9.pom.objects.BillingInfo;
@@ -17,10 +17,11 @@ public class BasicTest extends BaseTest {
   public void guestCheckoutUsingDirectBankTransfer() throws IOException {
     BillingInfo billingInfo = JacksonUtils.deserializeJson("billingAddress.json", BillingInfo.class);
     Product product = new Product(1215);
+    final String searchKey = "blue";
 
     StorePage storePage = new HomePage(driver).load()
         .openStorePageUsingMenu()
-        .searchProduct("blue");
+        .searchProduct(searchKey);
 
     String searchTitle = storePage.getSearchTitle();
     Assert.assertEquals(searchTitle, "Search results: “blue”");
