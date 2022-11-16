@@ -7,11 +7,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverManager {
-  public WebDriver initializeDriver() {
-    String browser = System.getProperty("browser", "CHROME");
+  public WebDriver initializeDriver(String browser) {
+    String defaultBrowser = browser.isBlank() ? "CHROME" : browser;
+    String browserArg = System.getProperty("browser", defaultBrowser);
     WebDriver driver;
 
-    switch (BrowserType.valueOf(browser)) {
+    switch (BrowserType.valueOf(browserArg)) {
       case CHROME: {
         WebDriverManager.chromiumdriver().setup();
         driver = new ChromeDriver();
@@ -23,7 +24,7 @@ public class DriverManager {
         break;
       }
       default: {
-        throw new IllegalStateException("Invalid browser name: " + browser);
+        throw new IllegalStateException("Invalid browser name: " + browserArg);
       }
     }
 

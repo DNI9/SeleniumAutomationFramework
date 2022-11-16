@@ -45,7 +45,7 @@ public class CheckoutPage extends BasePage {
   }
 
   public CheckoutPage selectCountry(String country) {
-    driver.findElement(countryDropDown).click();
+    waitShort.until(ExpectedConditions.elementToBeClickable(countryDropDown)).click();
     waitShort.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='" + country + "']"))).click();
     return this;
   }
@@ -65,7 +65,7 @@ public class CheckoutPage extends BasePage {
   }
 
   public CheckoutPage selectState(String state) {
-    driver.findElement(stateDropDown).click();
+    waitShort.until(ExpectedConditions.elementToBeClickable(stateDropDown)).click();
     waitShort.until(ExpectedConditions.elementToBeClickable(By.xpath("//li[text()='" + state + "']"))).click();
     return this;
   }

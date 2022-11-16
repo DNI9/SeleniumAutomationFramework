@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08d4867c-0e83-42ae-976e-df3fbef8ade2" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/constants/BrowserType.java" afterDir="false" />
+    <list default="true" id="08d4867c-0e83-42ae-976e-df3fbef8ade2" name="Changes" comment="add web driver manager, run using cli">
+      <change afterPath="$PROJECT_DIR$/testng-firefox.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/BasicTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/base/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/DriverManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/CheckoutPage.java" afterDir="false" />
     </list>
@@ -45,21 +45,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/dni9/Projects/java/SeleniumAutomationFramework",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.dni9.pom.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.BasicTest">
+  <component name="RunManager" selected="TestNG./home/dni9/Projects/java/SeleniumAutomationFramework/testng.xml">
     <configuration name="BasicTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumAutomationFramework" />
       <shortenClasspath name="NONE" />
@@ -141,7 +142,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="/home/dni9/Projects/java/SeleniumAutomationFramework/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumAutomationFramework" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue="TestNG./home/dni9/Projects/java/SeleniumAutomationFramework/testng.xml" />
       <item itemvalue="TestNG.BasicTest" />
       <item itemvalue="TestNG.BasicTest.guestCheckout" />
       <item itemvalue="TestNG.BasicTest.product" />
@@ -149,6 +170,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG./home/dni9/Projects/java/SeleniumAutomationFramework/testng.xml" />
         <item itemvalue="TestNG.BasicTest" />
         <item itemvalue="TestNG.BasicTest.productTest" />
         <item itemvalue="TestNG.BasicTest.product" />
@@ -172,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668609778761</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add web driver manager, run using cli">
+      <created>1668617016578</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668617016578</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,6 +223,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="add web driver manager, run using cli" />
+    <option name="LAST_COMMIT_MESSAGE" value="add web driver manager, run using cli" />
   </component>
 </project>
