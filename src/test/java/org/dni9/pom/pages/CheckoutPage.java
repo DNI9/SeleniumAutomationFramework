@@ -111,7 +111,7 @@ public class CheckoutPage extends BasePage {
   }
 
   public CheckoutPage enterUsername(String username) {
-    WebElement usernameEl = waitShort.until(ExpectedConditions.visibilityOfElementLocated(usernameField));
+    WebElement usernameEl = waitLong.until(ExpectedConditions.visibilityOfElementLocated(usernameField));
     usernameEl.clear();
     usernameEl.sendKeys(username);
     return this;

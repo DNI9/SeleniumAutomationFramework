@@ -19,7 +19,7 @@ public class BasicTest extends BaseTest {
     Product product = new Product(1215);
     final String searchKey = "blue";
 
-    StorePage storePage = new HomePage(driver).load()
+    StorePage storePage = new HomePage(getDriver()).load()
         .openStorePageUsingMenu()
         .searchProduct(searchKey);
 
@@ -32,10 +32,37 @@ public class BasicTest extends BaseTest {
     Assert.assertEquals(cartPage.getProductName(), product.getName());
 
     String notice = cartPage.openCheckoutPage()
-//        .openLoginForm()
-//        .enterUsername("demouser2")
-//        .enterPassword("demopwd")
-//        .clickLoginButton()
+        .setBillingInfo(billingInfo)
+        .selectDirectBankTransfer()
+        .placeOrder()
+        .getNotice();
+
+    Assert.assertEquals(notice, "Thank you. Your order has been received.");
+  }
+
+  @Test
+  public void guestCheckoutUsingDirectBankTransferWithLogin() throws IOException {
+    BillingInfo billingInfo = JacksonUtils.deserializeJson("billingAddress.json", BillingInfo.class);
+    Product product = new Product(1215);
+    final String searchKey = "blue";
+
+    StorePage storePage = new HomePage(getDriver()).load()
+        .openStorePageUsingMenu()
+        .searchProduct(searchKey);
+
+    String searchTitle = storePage.getSearchTitle();
+    Assert.assertEquals(searchTitle, "Search results: “blue”");
+
+    CartPage cartPage = storePage
+        .addToCart(product.getName())
+        .openCartPage();
+    Assert.assertEquals(cartPage.getProductName(), product.getName());
+
+    String notice = cartPage.openCheckoutPage()
+        .openLoginForm()
+        .enterUsername("demouser2")
+        .enterPassword("demopwd")
+        .clickLoginButton()
         .setBillingInfo(billingInfo)
         .selectDirectBankTransfer()
         .placeOrder()
