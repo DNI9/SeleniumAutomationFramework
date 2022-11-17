@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08d4867c-0e83-42ae-976e-df3fbef8ade2" name="Changes" comment="default options for browser, testng xmls">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="08d4867c-0e83-42ae-976e-df3fbef8ade2" name="Changes" comment="parallel execution with maven surefire plugin">
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/DriverManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/CheckoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/BasicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng-firefox.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668625562193</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="parallel execution with maven surefire plugin">
+      <created>1668707078460</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668707078460</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,6 +238,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="add web driver manager, run using cli" />
     <MESSAGE value="default options for browser, testng xmls" />
-    <option name="LAST_COMMIT_MESSAGE" value="default options for browser, testng xmls" />
+    <MESSAGE value="parallel execution with maven surefire plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="parallel execution with maven surefire plugin" />
   </component>
 </project>

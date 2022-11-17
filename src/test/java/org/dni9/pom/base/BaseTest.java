@@ -22,18 +22,11 @@ public class BaseTest {
   public void startDriver(String browser) {
     String localBrowser = System.getProperty("browser", browser);
     setDriver(new DriverManager().initializeDriver(localBrowser));
-    printThreadInfo();
   }
 
   @AfterMethod
   public void quitDriver() {
-    printThreadInfo();
     getDriver().quit();
   }
 
-  private void printThreadInfo() {
-    System.out.println("-------------------------------------------------");
-    System.out.println("CURRENT THREAD: " + Thread.currentThread().getId() + ", DRIVER: " + getDriver());
-    System.out.println("-------------------------------------------------");
-  }
 }
