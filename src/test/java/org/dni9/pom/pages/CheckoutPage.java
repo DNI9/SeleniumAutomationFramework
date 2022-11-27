@@ -111,7 +111,7 @@ public class CheckoutPage extends BasePage {
   }
 
   public CheckoutPage enterUsername(String username) {
-    WebElement usernameEl = waitLong.until(ExpectedConditions.visibilityOfElementLocated(usernameField));
+    WebElement usernameEl = waitLong.until(ExpectedConditions.visibilityOf(driver.findElement(usernameField)));
     usernameEl.clear();
     usernameEl.sendKeys(username);
     return this;
@@ -135,7 +135,8 @@ public class CheckoutPage extends BasePage {
 
   public CheckoutPage selectDirectBankTransfer() {
     WebElement radioBtn = waitShort.until(ExpectedConditions.elementToBeClickable(directBankTransferRadioBtn));
-    if (!radioBtn.isSelected()) radioBtn.click();
+    if (!radioBtn.isSelected())
+      radioBtn.click();
     return this;
   }
 }

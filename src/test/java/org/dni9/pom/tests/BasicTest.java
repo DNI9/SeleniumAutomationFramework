@@ -3,9 +3,11 @@ package org.dni9.pom.tests;
 import org.dni9.pom.base.BaseTest;
 import org.dni9.pom.objects.BillingInfo;
 import org.dni9.pom.objects.Product;
+import org.dni9.pom.objects.User;
 import org.dni9.pom.pages.CartPage;
 import org.dni9.pom.pages.HomePage;
 import org.dni9.pom.pages.StorePage;
+import org.dni9.pom.utils.ConfigLoader;
 import org.dni9.pom.utils.JacksonUtils;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -44,6 +46,9 @@ public class BasicTest extends BaseTest {
   public void guestCheckoutUsingDirectBankTransferWithLogin() throws IOException {
     BillingInfo billingInfo = JacksonUtils.deserializeJson("billingAddress.json", BillingInfo.class);
     Product product = new Product(1215);
+    User user = new User(
+        ConfigLoader.getInstance().getConfig("username"),
+        ConfigLoader.getInstance().getConfig("password"));
     final String searchKey = "blue";
 
     StorePage storePage = new HomePage(getDriver()).load()
@@ -60,8 +65,8 @@ public class BasicTest extends BaseTest {
 
     String notice = cartPage.openCheckoutPage()
         .openLoginForm()
-        .enterUsername("demouser2")
-        .enterPassword("demopwd")
+        .enterUsername(user.getUsername())
+        .enterPassword(user.getPassword())
         .clickLoginButton()
         .setBillingInfo(billingInfo)
         .selectDirectBankTransfer()

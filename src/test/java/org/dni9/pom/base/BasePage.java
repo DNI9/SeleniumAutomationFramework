@@ -1,5 +1,6 @@
 package org.dni9.pom.base;
 
+import org.dni9.pom.utils.ConfigLoader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +11,7 @@ import java.time.Duration;
 import java.util.List;
 
 public class BasePage {
-  public static final String BASE_URL = "https://askomdch.com";
+  protected final String BASE_URL = ConfigLoader.getInstance().getConfig("baseUrl");
   protected final WebDriver driver;
   protected final WebDriverWait waitLong;
   protected final WebDriverWait waitShort;
