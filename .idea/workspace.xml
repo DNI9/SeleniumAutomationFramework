@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08d4867c-0e83-42ae-976e-df3fbef8ade2" name="Changes" comment="parallel execution with testng">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/objects/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/utils/ConfigLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/utils/PropertyUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/AddToCartTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/NavigationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/SearchTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/base/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/CheckoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/BasicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/DriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/StorePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/StorePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,16 +46,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/dni9/Projects/java/SeleniumAutomationFramework",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/dni9/Projects/java/SeleniumAutomationFramework&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.dni9.pom.pages" />
@@ -66,28 +64,19 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.BasicTest.guestCheckoutUsingDirectBankTransferWithLogin">
-    <configuration name="BasicTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AddToCartTest.addToCartFromStorePage">
+    <configuration name="AddToCartTest.addToCartFromStorePage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumAutomationFramework" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="org.dni9.pom.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="org.dni9.pom.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.dni9.pom.tests.BasicTest" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
+      <option name="MAIN_CLASS_NAME" value="org.dni9.pom.tests.AddToCartTest" />
+      <option name="METHOD_NAME" value="addToCartFromStorePage" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -123,7 +112,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BasicTest.product" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="NavigationTest.navigateFromHomeToStoreUsingMainMenu" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -131,9 +120,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.dni9" />
-      <option name="MAIN_CLASS_NAME" value="org.dni9.pom.tests.BasicTest" />
-      <option name="METHOD_NAME" value="product" />
+      <option name="PACKAGE_NAME" value="org.dni9.pom.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.dni9.pom.tests.NavigationTest" />
+      <option name="METHOD_NAME" value="navigateFromHomeToStoreUsingMainMenu" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -141,7 +130,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BasicTest.productTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchTest.searchWithPartialMatch" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumAutomationFramework" />
       <extension name="coverage">
         <pattern>
@@ -149,9 +138,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.dni9" />
-      <option name="MAIN_CLASS_NAME" value="org.dni9.pom.tests.BasicTest" />
-      <option name="METHOD_NAME" value="productTest" />
+      <option name="PACKAGE_NAME" value="org.dni9.pom.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.dni9.pom.tests.SearchTest" />
+      <option name="METHOD_NAME" value="searchWithPartialMatch" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -179,19 +168,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="TestNG.AddToCartTest.addToCartFromStorePage" />
+      <item itemvalue="TestNG.NavigationTest.navigateFromHomeToStoreUsingMainMenu" />
+      <item itemvalue="TestNG.SearchTest.searchWithPartialMatch" />
       <item itemvalue="TestNG.BasicTest.guestCheckoutUsingDirectBankTransferWithLogin" />
       <item itemvalue="TestNG./home/dni9/Projects/java/SeleniumAutomationFramework/testng.xml" />
-      <item itemvalue="TestNG.BasicTest" />
-      <item itemvalue="TestNG.BasicTest.product" />
-      <item itemvalue="TestNG.BasicTest.productTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AddToCartTest.addToCartFromStorePage" />
+        <item itemvalue="TestNG.NavigationTest.navigateFromHomeToStoreUsingMainMenu" />
+        <item itemvalue="TestNG.SearchTest.searchWithPartialMatch" />
         <item itemvalue="TestNG.BasicTest.guestCheckoutUsingDirectBankTransferWithLogin" />
         <item itemvalue="TestNG./home/dni9/Projects/java/SeleniumAutomationFramework/testng.xml" />
-        <item itemvalue="TestNG.BasicTest" />
-        <item itemvalue="TestNG.BasicTest.productTest" />
-        <item itemvalue="TestNG.BasicTest.product" />
       </list>
     </recent_temporary>
   </component>

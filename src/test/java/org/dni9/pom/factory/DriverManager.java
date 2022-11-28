@@ -3,8 +3,6 @@ package org.dni9.pom.factory;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.dni9.pom.constants.BrowserType;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverManager {
   public WebDriver initializeDriver(String browser) {
@@ -12,13 +10,13 @@ public class DriverManager {
 
     switch (BrowserType.valueOf(browser)) {
       case CHROME: {
-        WebDriverManager.chromiumdriver().setup();
-        driver = new ChromeDriver();
+//        WebDriverManager.chromiumdriver().setup();
+        driver = WebDriverManager.chromedriver().create();
         break;
       }
       case FIREFOX: {
-        WebDriverManager.firefoxdriver().setup();
-        driver = new FirefoxDriver();
+//        WebDriverManager.firefoxdriver().setup();
+        driver = WebDriverManager.firefoxdriver().create();
         break;
       }
       default: {

@@ -17,6 +17,11 @@ public class StorePage extends BasePage {
     super(driver);
   }
 
+  public StorePage load() {
+    load("/store");
+    return this;
+  }
+
   public StorePage searchProduct(String query) {
     waitLong.until(ExpectedConditions.visibilityOfElementLocated(searchField)).sendKeys(query);
     driver.findElement(searchBtn).click();
@@ -24,6 +29,7 @@ public class StorePage extends BasePage {
   }
 
   public String getSearchTitle() {
+    // NOTE: this can be done by checking the url too
     waitShort.until(ExpectedConditions.textMatches(searchTitle, Pattern.compile("Search results", Pattern.CASE_INSENSITIVE)));
     return driver.findElement(searchTitle).getText();
   }
@@ -37,5 +43,9 @@ public class StorePage extends BasePage {
   public CartPage openCartPage() {
     waitLong.until(ExpectedConditions.elementToBeClickable(viewCartLink)).click();
     return new CartPage(driver);
+  }
+
+  public boolean doesUrlContains(String key) {
+    return driver.getCurrentUrl().contains(BASE_URL + key);
   }
 }

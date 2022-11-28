@@ -1,10 +1,14 @@
 package org.dni9.pom.base;
 
+import org.dni9.pom.constants.BrowserType;
 import org.dni9.pom.factory.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+
+import java.util.Objects;
 
 public class BaseTest {
   private final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
@@ -19,8 +23,9 @@ public class BaseTest {
 
   @BeforeMethod
   @Parameters("browser")
-  public void startDriver(String browser) {
-    String localBrowser = System.getProperty("browser", browser);
+  public void startDriver(@Optional String browser) {
+    String defaultBrowser = !Objects.isNull(browser) ? browser : BrowserType.CHROME.toString();
+    String localBrowser = System.getProperty("browser", defaultBrowser);
     setDriver(new DriverManager().initializeDriver(localBrowser));
   }
 
