@@ -2,12 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
 <suite name="All Test Suite">
-    <test verbose="2" name="Basic Test - Chrome" parallel="methods">
-        <parameter name="browser" value="CHROME"/>
-        <classes>
-            <class name="org.dni9.pom.tests.BasicTest"/>
-        </classes>
-    </test>
+    <!-- <test verbose="2" name="Basic Test - Chrome" parallel="methods"> -->
+    <!--     <parameter name="browser" value="CHROME"/> -->
+    <!--     <classes> -->
+    <!--         <class name="org.dni9.pom.tests.BasicTest"/> -->
+    <!--     </classes> -->
+    <!-- </test> -->
     <test verbose="2" name="Basic Test - Firefox" parallel="methods">
         <parameter name="browser" value="FIREFOX"/>
         <classes>
