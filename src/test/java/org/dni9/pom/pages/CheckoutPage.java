@@ -2,6 +2,7 @@ package org.dni9.pom.pages;
 
 import org.dni9.pom.base.BasePage;
 import org.dni9.pom.objects.BillingInfo;
+import org.dni9.pom.objects.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,8 +27,15 @@ public class CheckoutPage extends BasePage {
   private final By stateDropDown = By.id("select2-billing_state-container");
   private final By directBankTransferRadioBtn = By.id("payment_method_bacs");
 
+  private final By productName = By.cssSelector(".cart_item > .product-name");
+
   public CheckoutPage(WebDriver driver) {
     super(driver);
+  }
+
+  public CheckoutPage load() {
+    load("/checkout");
+    return this;
   }
 
   public CheckoutPage enterFirstName(String firstName) {
@@ -129,8 +137,8 @@ public class CheckoutPage extends BasePage {
     return this;
   }
 
-  public CheckoutPage login(String username, String password) {
-    return enterUsername(username).enterPassword(password).clickLoginButton();
+  public CheckoutPage login(User user) {
+    return enterUsername(user.getUsername()).enterPassword(user.getPassword()).clickLoginButton();
   }
 
   public CheckoutPage selectDirectBankTransfer() {
@@ -138,5 +146,9 @@ public class CheckoutPage extends BasePage {
     if (!radioBtn.isSelected())
       radioBtn.click();
     return this;
+  }
+
+  public String getProductName() {
+    return waitShort.until(ExpectedConditions.visibilityOfElementLocated(productName)).getText();
   }
 }
