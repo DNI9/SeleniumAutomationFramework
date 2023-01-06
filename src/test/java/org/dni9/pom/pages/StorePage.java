@@ -1,6 +1,7 @@
 package org.dni9.pom.pages;
 
 import org.dni9.pom.base.BasePage;
+import org.dni9.pom.pages.components.ProductListing;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,10 +12,15 @@ public class StorePage extends BasePage {
   private final By searchField = By.id("woocommerce-product-search-field-0");
   private final By searchBtn = By.cssSelector("button[value='Search']");
   private final By searchTitle = By.cssSelector(".woocommerce-products-header__title.page-title");
-  private final By viewCartLink = By.cssSelector("a[title='View cart']");
+  private final ProductListing productListing;
 
   public StorePage(WebDriver driver) {
     super(driver);
+    productListing = new ProductListing(driver);
+  }
+
+  public ProductListing getProductListing() {
+    return productListing;
   }
 
   public StorePage load() {
@@ -32,17 +38,6 @@ public class StorePage extends BasePage {
     // NOTE: this can be done by checking the url too
     waitShort.until(ExpectedConditions.textMatches(searchTitle, Pattern.compile("Search results", Pattern.CASE_INSENSITIVE)));
     return driver.findElement(searchTitle).getText();
-  }
-
-  public StorePage addToCart(String productName) {
-    By addToCartBtn = By.cssSelector("a[aria-label='Add “" + productName + "” to your cart']");
-    driver.findElement(addToCartBtn).click();
-    return this;
-  }
-
-  public CartPage openCartPage() {
-    waitLong.until(ExpectedConditions.elementToBeClickable(viewCartLink)).click();
-    return new CartPage(driver);
   }
 
   public boolean doesUrlContains(String key) {

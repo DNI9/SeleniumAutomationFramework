@@ -16,7 +16,9 @@ public class AddToCartTest extends BaseTest {
   @Test
   public void addToCartFromStorePage() throws IOException {
     Product product = new Product(1215);
-    CartPage cartPage = new StorePage(getDriver()).load()
+    CartPage cartPage = new StorePage(getDriver())
+        .load()
+        .getProductListing()
         .addToCart(product.getName())
         .openCartPage();
 
@@ -27,6 +29,7 @@ public class AddToCartTest extends BaseTest {
   public void addFeaturedProductsToCart(Product product) {
     HomePage homePage = new HomePage(getDriver()).load();
     CartPage cartPage = homePage
+        .getProductListing()
         .addToCart(product.getName())
         .openCartPage();
     Assert.assertEquals(cartPage.getProductName(), product.getName());

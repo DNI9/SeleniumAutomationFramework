@@ -24,6 +24,7 @@ public class BasicTest extends BaseTest {
     final String searchKey = "blue";
 
     StorePage storePage = new HomePage(getDriver()).load()
+        .getHeader()
         .openStorePageUsingMenu()
         .searchProduct(searchKey);
 
@@ -31,6 +32,7 @@ public class BasicTest extends BaseTest {
     Assert.assertEquals(searchTitle, "Search results: “blue”");
 
     CartPage cartPage = storePage
+        .getProductListing()
         .addToCart(product.getName())
         .openCartPage();
     Assert.assertEquals(cartPage.getProductName(), product.getName());
@@ -55,6 +57,7 @@ public class BasicTest extends BaseTest {
     final String searchKey = "blue";
 
     StorePage storePage = new HomePage(getDriver()).load()
+        .getHeader()
         .openStorePageUsingMenu()
         .searchProduct(searchKey);
 
@@ -62,6 +65,7 @@ public class BasicTest extends BaseTest {
     Assert.assertEquals(searchTitle, "Search results: “blue”");
 
     CartPage cartPage = storePage
+        .getProductListing()
         .addToCart(product.getName())
         .openCartPage();
     Assert.assertEquals(cartPage.getProductName(), product.getName());

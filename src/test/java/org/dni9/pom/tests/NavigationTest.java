@@ -10,7 +10,10 @@ public class NavigationTest extends BaseTest {
 
   @Test
   public void navigateFromHomeToStoreUsingMainMenu() {
-    StorePage storePage = new HomePage(getDriver()).load().openStorePageUsingMenu();
+    StorePage storePage = new HomePage(getDriver())
+        .load()
+        .getHeader()
+        .openStorePageUsingMenu();
     Assert.assertTrue(storePage.doesUrlContains("/store"));
   }
 }

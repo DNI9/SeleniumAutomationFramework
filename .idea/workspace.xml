@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08d4867c-0e83-42ae-976e-df3fbef8ade2" name="Changes" comment="add CheckoutTest">
+    <list default="true" id="08d4867c-0e83-42ae-976e-df3fbef8ade2" name="Changes" comment="use data provider to add featured products">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/components/Header.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/components/ProductListing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/base/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/StorePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/StorePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/AddToCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/AddToCartTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/BasicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/NavigationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/NavigationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +70,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AddToCartTest.addFeaturedProductsToCart">
+  <component name="RunManager" selected="TestNG./home/dni9/Projects/java/SeleniumAutomationFramework/testng.xml">
     <configuration name="AddToCartTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.dni9.pom.tests.AddToCartTest" />
       <module name="SeleniumAutomationFramework" />
@@ -156,10 +157,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG./home/dni9/Projects/java/SeleniumAutomationFramework/testng.xml" />
         <item itemvalue="TestNG.AddToCartTest.addFeaturedProductsToCart" />
         <item itemvalue="Application.AddToCartTest" />
         <item itemvalue="TestNG.NavigationTest.navigateFromHomeToStoreUsingMainMenu" />
-        <item itemvalue="TestNG./home/dni9/Projects/java/SeleniumAutomationFramework/testng.xml" />
         <item itemvalue="TestNG.CheckoutTest.guestCheckoutUsingDirectBankTransfer" />
       </list>
     </recent_temporary>
@@ -215,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673015320816</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="use data provider to add featured products">
+      <created>1673030101371</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1673030101371</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -242,7 +250,8 @@
     <MESSAGE value="parallel execution with maven surefire plugin" />
     <MESSAGE value="parallel execution with testng" />
     <MESSAGE value="add CheckoutTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="add CheckoutTest" />
+    <MESSAGE value="use data provider to add featured products" />
+    <option name="LAST_COMMIT_MESSAGE" value="use data provider to add featured products" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
