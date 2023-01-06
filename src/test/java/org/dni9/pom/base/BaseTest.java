@@ -1,7 +1,6 @@
 package org.dni9.pom.base;
 
 import io.restassured.http.Cookies;
-import org.dni9.pom.constants.BrowserType;
 import org.dni9.pom.factory.DriverManager;
 import org.dni9.pom.utils.CookieUtils;
 import org.openqa.selenium.Cookie;
@@ -12,7 +11,6 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import java.util.List;
-import java.util.Objects;
 
 public class BaseTest {
   private final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
@@ -27,9 +25,8 @@ public class BaseTest {
 
   @BeforeMethod
   @Parameters("browser")
-  public void startDriver(@Optional String browser) {
-    String defaultBrowser = !Objects.isNull(browser) ? browser : BrowserType.CHROME.toString();
-    String localBrowser = System.getProperty("browser", defaultBrowser);
+  public void startDriver(@Optional("CHROME") String browser) {
+    String localBrowser = System.getProperty("browser", browser);
     setDriver(new DriverManager().initializeDriver(localBrowser));
   }
 

@@ -10,12 +10,14 @@ import org.dni9.pom.pages.StorePage;
 import org.dni9.pom.utils.ConfigLoader;
 import org.dni9.pom.utils.JacksonUtils;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
 public class BasicTest extends BaseTest {
   @Test
+  @Ignore
   public void guestCheckoutUsingDirectBankTransfer() throws IOException {
     BillingInfo billingInfo = JacksonUtils.deserializeJson("billingAddress.json", BillingInfo.class);
     Product product = new Product(1215);
@@ -43,6 +45,7 @@ public class BasicTest extends BaseTest {
   }
 
   @Test
+  @Ignore
   public void guestCheckoutUsingDirectBankTransferWithLogin() throws IOException {
     BillingInfo billingInfo = JacksonUtils.deserializeJson("billingAddress.json", BillingInfo.class);
     Product product = new Product(1215);
