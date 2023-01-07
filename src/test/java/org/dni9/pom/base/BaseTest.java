@@ -53,8 +53,10 @@ public class BaseTest {
           + result.getTestClass().getRealClass().getSimpleName() + "_"
           + result.getMethod().getMethodName() + ".png";
       File destFile = new File(filePath);
+
       takeFullScreenshot(destFile);
     }
+
     getDriver().quit();
   }
 

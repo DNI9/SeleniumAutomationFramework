@@ -15,6 +15,7 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <suiteFile>testng.xml</suiteFile>  <!-- NOTE: pass as argument mvn clean test -DsuiteFile=testng.xml -->
+        <aspectj.version>1.9.19</aspectj.version> <!-- for allure report -->
     </properties>
 
     <dependencies>
@@ -68,6 +69,13 @@
             <version>1.5.4</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.20.1</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -77,12 +85,23 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.0.0-M7</version>
                 <configuration>
-                    <!--                    <parallel>methods</parallel>-->
-                    <!--                    <threadCount>6</threadCount>-->
+                    <!-- <parallel>methods</parallel>-->
+                    <!-- <threadCount>6</threadCount>-->
                     <suiteXmlFiles>
                         <suiteXmlFile>${suiteFile}</suiteXmlFile>
                     </suiteXmlFiles>
+                    <!-- Allure reporting -->
+                    <argLine>
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                    </argLine>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>

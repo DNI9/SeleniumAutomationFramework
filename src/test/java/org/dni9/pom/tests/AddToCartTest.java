@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class AddToCartTest extends BaseTest {
 
-  @Test
+  @Test(description = "Adds and validates products to cart from store page")
   public void addToCartFromStorePage() throws IOException {
     Product product = new Product(1215);
     CartPage cartPage = new StorePage(getDriver())
@@ -25,7 +25,11 @@ public class AddToCartTest extends BaseTest {
     Assert.assertEquals(cartPage.getProductName(), product.getName());
   }
 
-  @Test(dataProvider = "getFeaturedProducts", dataProviderClass = ProductProvider.class)
+  @Test(
+      dataProvider = "getFeaturedProducts",
+      dataProviderClass = ProductProvider.class,
+      description = "Add and validates adding products to cart from featured products"
+  )
   public void addFeaturedProductsToCart(Product product) {
     HomePage homePage = new HomePage(getDriver()).load();
     CartPage cartPage = homePage

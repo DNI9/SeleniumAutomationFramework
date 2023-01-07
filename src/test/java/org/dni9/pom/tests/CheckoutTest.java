@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class CheckoutTest extends BaseTest {
 
-  @Test
+  @Test(description = "Validates checkout using guest account and direct bank transfer")
   public void guestCheckoutUsingDirectBankTransfer() throws IOException {
     BillingInfo billingInfo = JacksonUtils.deserializeJson("billingAddress.json", BillingInfo.class);
     CheckoutPage checkoutPage = new CheckoutPage(getDriver()).load();
@@ -34,7 +34,7 @@ public class CheckoutTest extends BaseTest {
     Assert.assertEquals(checkoutPage.getNotice(), "Thank you. Your order has been received.");
   }
 
-  @Test
+  @Test(description = "Validates checkout using user account and direct bank transfer")
   public void loginAndCheckoutUsingDirectBankTransfer() throws IOException {
     BillingInfo billingInfo = JacksonUtils.deserializeJson("billingAddress.json", BillingInfo.class);
     long randomNumber = new FakerUtils().generateRandomNumber();
@@ -45,7 +45,7 @@ public class CheckoutTest extends BaseTest {
 
     SignUpApi signUpApi = new SignUpApi();
     signUpApi.register(user);
-    
+
     CartApi cartApi = new CartApi(signUpApi.getCookies());
     Product product = new Product(1215);
     cartApi.addToCart(product.getId(), 1);

@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class LoginTest extends BaseTest {
-  @Test
+  @Test(description = "Validates login during checkout")
   public void loginDuringCheckout() throws IOException {
     long randomNumber = new FakerUtils().generateRandomNumber();
     String username = "demouser" + randomNumber;
