@@ -1,5 +1,6 @@
 package org.dni9.pom.pages;
 
+import io.qameta.allure.Step;
 import org.dni9.pom.base.BasePage;
 import org.dni9.pom.pages.components.ProductListing;
 import org.openqa.selenium.By;
@@ -19,15 +20,18 @@ public class StorePage extends BasePage {
     productListing = new ProductListing(driver);
   }
 
+  @Step("Get product")
   public ProductListing getProductListing() {
     return productListing;
   }
 
+  @Step("Load store page")
   public StorePage load() {
     load("/store");
     return this;
   }
 
+  @Step("Search product for {query}")
   public StorePage searchProduct(String query) {
     waitLong.until(ExpectedConditions.visibilityOfElementLocated(searchField)).sendKeys(query);
     driver.findElement(searchBtn).click();

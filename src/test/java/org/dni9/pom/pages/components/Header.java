@@ -1,5 +1,6 @@
 package org.dni9.pom.pages.components;
 
+import io.qameta.allure.Step;
 import org.dni9.pom.base.BasePage;
 import org.dni9.pom.pages.StorePage;
 import org.openqa.selenium.By;
@@ -12,6 +13,7 @@ public class Header extends BasePage {
     super(driver);
   }
 
+  @Step("Click store page on menu")
   public StorePage openStorePageUsingMenu() {
     driver.findElement(storeMenuLink).click();
     return new StorePage(driver);

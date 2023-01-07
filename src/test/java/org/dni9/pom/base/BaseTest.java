@@ -1,5 +1,6 @@
 package org.dni9.pom.base;
 
+import io.qameta.allure.Step;
 import io.restassured.http.Cookies;
 import org.apache.commons.io.FileUtils;
 import org.dni9.pom.constants.DriverType;
@@ -35,7 +36,8 @@ public class BaseTest {
     this.driver.set(driver);
   }
 
-  @BeforeMethod
+  @BeforeMethod(description = "Start driver")
+  @Step("Start {browser} driver")
   @Parameters("browser")
   public synchronized void startDriver(@Optional("CHROME") String browser) {
     String localBrowser = System.getProperty("browser", browser);
@@ -45,7 +47,8 @@ public class BaseTest {
 
   // NOTE: by using `synchronized` keyword, other thread have to wait before one thread finishes using this method
   // basically making this run sequentially.
-  @AfterMethod
+  @AfterMethod(description = "Quit driver")
+  @Step("Quit {browser} driver")
   @Parameters("browser")
   public synchronized void quitDriver(@Optional("CHROME") String browser, ITestResult result) throws IOException {
     if (result.getStatus() == ITestResult.FAILURE) {
@@ -54,7 +57,7 @@ public class BaseTest {
           + result.getMethod().getMethodName() + ".png";
       File destFile = new File(filePath);
 
-      takeFullScreenshot(destFile);
+      takeScreenshot(destFile);
     }
 
     getDriver().quit();

@@ -4,15 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08d4867c-0e83-42ae-976e-df3fbef8ade2" name="Changes" comment="take full page screenshot using AShot">
+    <list default="true" id="08d4867c-0e83-42ae-976e-df3fbef8ade2" name="Changes" comment="add allure reporting">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/api/actions/CartApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/api/actions/CartApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/api/actions/SignUpApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/api/actions/SignUpApi.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/dataproviders/ProductProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/dataproviders/ProductProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/CheckoutPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/StorePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/StorePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/components/Header.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/components/Header.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/components/ProductListing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/components/ProductListing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/AddToCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/AddToCartTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/CheckoutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/CheckoutTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/LoginTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/NavigationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/NavigationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/SearchTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/SearchTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,20 +59,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/dni9/Projects/java/SeleniumAutomationFramework&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/dni9/Projects/java/SeleniumAutomationFramework",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "editor.preferences.completion"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.dni9.pom.pages" />
@@ -254,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673101474337</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="add allure reporting">
+      <created>1673114086992</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1673114086992</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -287,7 +302,8 @@
     <MESSAGE value="use factory pattern for DriverManager" />
     <MESSAGE value="take screenshot on test failure" />
     <MESSAGE value="take full page screenshot using AShot" />
-    <option name="LAST_COMMIT_MESSAGE" value="take full page screenshot using AShot" />
+    <MESSAGE value="add allure reporting" />
+    <option name="LAST_COMMIT_MESSAGE" value="add allure reporting" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

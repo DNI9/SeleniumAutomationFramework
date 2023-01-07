@@ -7,7 +7,7 @@ import org.testng.annotations.DataProvider;
 import java.io.IOException;
 
 public class ProductProvider {
-  @DataProvider(name = "getFeaturedProducts", parallel = false)
+  @DataProvider(name = "getFeaturedProducts", parallel = true)
   public static Object[][] getFeaturedProducts() throws IOException {
     Product[] products = JacksonUtils.deserializeJson("products.json", Product[].class);
     var finalArr = new Object[products.length][];

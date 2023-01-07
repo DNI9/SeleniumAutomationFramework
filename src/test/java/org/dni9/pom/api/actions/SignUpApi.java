@@ -1,5 +1,6 @@
 package org.dni9.pom.api.actions;
 
+import io.qameta.allure.Step;
 import io.restassured.http.Cookies;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
@@ -37,6 +38,7 @@ public class SignUpApi {
     return response;
   }
 
+  @Step("Register with username = {user.username}")
   public Response register(User user) {
     Cookies cookies = new Cookies();
     Header typeHeader = new Header("content-type", "application/x-www-form-urlencoded");

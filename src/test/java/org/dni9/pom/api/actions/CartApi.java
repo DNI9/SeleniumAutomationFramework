@@ -1,5 +1,6 @@
 package org.dni9.pom.api.actions;
 
+import io.qameta.allure.Step;
 import io.restassured.http.Cookies;
 import io.restassured.http.Header;
 import io.restassured.http.Headers;
@@ -25,6 +26,7 @@ public class CartApi {
     return cookies;
   }
 
+  @Step("Add {quantity} product with id = {productId} to cart")
   public Response addToCart(int productId, int quantity) {
     Header typeHeader = new Header("content-type", "application/x-www-form-urlencoded");
     Headers headers = new Headers(typeHeader);

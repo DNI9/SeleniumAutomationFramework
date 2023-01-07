@@ -1,5 +1,6 @@
 package org.dni9.pom.pages;
 
+import io.qameta.allure.Step;
 import org.dni9.pom.base.BasePage;
 import org.dni9.pom.pages.components.Header;
 import org.dni9.pom.pages.components.ProductListing;
@@ -19,10 +20,12 @@ public class HomePage extends BasePage {
     return header;
   }
 
+  @Step("Get featured product")
   public ProductListing getProductListing() {
     return productListing;
   }
 
+  @Step("Load homepage")
   public HomePage load() {
     super.load("/");
     return this;

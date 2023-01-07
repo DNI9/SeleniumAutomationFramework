@@ -1,5 +1,6 @@
 package org.dni9.pom.pages;
 
+import io.qameta.allure.Step;
 import org.dni9.pom.base.BasePage;
 import org.dni9.pom.objects.BillingInfo;
 import org.dni9.pom.objects.User;
@@ -33,6 +34,7 @@ public class CheckoutPage extends BasePage {
     super(driver);
   }
 
+  @Step("Load checkout page")
   public CheckoutPage load() {
     load("/checkout");
     return this;
@@ -92,6 +94,7 @@ public class CheckoutPage extends BasePage {
     return this;
   }
 
+  @Step("Fill billing information")
   public CheckoutPage setBillingInfo(BillingInfo address) {
     return enterFirstName(address.getFirstName())
         .enterLastName(address.getLastName())
@@ -103,6 +106,7 @@ public class CheckoutPage extends BasePage {
         .enterEmail(address.getEmail());
   }
 
+  @Step("Place order")
   public CheckoutPage placeOrder() {
     waitForElementsToDisappear(loadingOverlay, 10);
     driver.findElement(placeOrderBtn).click();
@@ -113,6 +117,7 @@ public class CheckoutPage extends BasePage {
     return waitLong.until(ExpectedConditions.visibilityOfElementLocated(orderSuccessNotice)).getText();
   }
 
+  @Step("Open login form")
   public CheckoutPage openLoginForm() {
     waitLong.until(ExpectedConditions.elementToBeClickable(loginLink)).click();
     return this;
@@ -137,10 +142,12 @@ public class CheckoutPage extends BasePage {
     return this;
   }
 
+  @Step("Login with username = {user.username}")
   public CheckoutPage login(User user) {
     return enterUsername(user.getUsername()).enterPassword(user.getPassword()).clickLoginButton();
   }
 
+  @Step("Select direct bank transfer option")
   public CheckoutPage selectDirectBankTransfer() {
     WebElement radioBtn = waitShort.until(ExpectedConditions.elementToBeClickable(directBankTransferRadioBtn));
     if (!radioBtn.isSelected())

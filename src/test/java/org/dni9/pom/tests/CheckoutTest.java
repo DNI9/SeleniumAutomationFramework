@@ -1,5 +1,7 @@
 package org.dni9.pom.tests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
 import org.dni9.pom.api.actions.CartApi;
 import org.dni9.pom.api.actions.SignUpApi;
 import org.dni9.pom.base.BaseTest;
@@ -14,9 +16,11 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+@Epic("Checkout Test")
 public class CheckoutTest extends BaseTest {
 
   @Test(description = "Validates checkout using guest account and direct bank transfer")
+  @Story("Checkout using guest account and direct bank transfer")
   public void guestCheckoutUsingDirectBankTransfer() throws IOException {
     BillingInfo billingInfo = JacksonUtils.deserializeJson("billingAddress.json", BillingInfo.class);
     CheckoutPage checkoutPage = new CheckoutPage(getDriver()).load();
@@ -35,6 +39,7 @@ public class CheckoutTest extends BaseTest {
   }
 
   @Test(description = "Validates checkout using user account and direct bank transfer")
+  @Story("Checkout with user account and direct bank transfer")
   public void loginAndCheckoutUsingDirectBankTransfer() throws IOException {
     BillingInfo billingInfo = JacksonUtils.deserializeJson("billingAddress.json", BillingInfo.class);
     long randomNumber = new FakerUtils().generateRandomNumber();

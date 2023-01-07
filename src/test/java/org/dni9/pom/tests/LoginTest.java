@@ -1,5 +1,7 @@
 package org.dni9.pom.tests;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
 import org.dni9.pom.api.actions.CartApi;
 import org.dni9.pom.api.actions.SignUpApi;
 import org.dni9.pom.base.BaseTest;
@@ -12,8 +14,10 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+@Epic("Login test")
 public class LoginTest extends BaseTest {
   @Test(description = "Validates login during checkout")
+  @Story("Login during checkout")
   public void loginDuringCheckout() throws IOException {
     long randomNumber = new FakerUtils().generateRandomNumber();
     String username = "demouser" + randomNumber;
