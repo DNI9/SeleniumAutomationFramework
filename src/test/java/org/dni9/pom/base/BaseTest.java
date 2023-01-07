@@ -1,7 +1,9 @@
 package org.dni9.pom.base;
 
 import io.restassured.http.Cookies;
+import org.dni9.pom.constants.DriverType;
 import org.dni9.pom.factory.DriverManager;
+import org.dni9.pom.factory.DriverManagerFactory;
 import org.dni9.pom.utils.CookieUtils;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
@@ -25,13 +27,16 @@ public class BaseTest {
 
   @BeforeMethod
   @Parameters("browser")
-  public void startDriver(@Optional("CHROME") String browser) {
+  public synchronized void startDriver(@Optional("CHROME") String browser) {
     String localBrowser = System.getProperty("browser", browser);
-    setDriver(new DriverManager().initializeDriver(localBrowser));
+    DriverManager driverManager = DriverManagerFactory.getManager(DriverType.valueOf(localBrowser));
+    setDriver(driverManager.createDriver());
   }
 
+  // NOTE: by using `synchronized` keyword, other thread have to wait before one thread finishes using this method
+  // basically making this run sequentially.
   @AfterMethod
-  public void quitDriver() {
+  public synchronized void quitDriver() {
     getDriver().quit();
   }
 

@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08d4867c-0e83-42ae-976e-df3fbef8ade2" name="Changes" comment="use data provider to add featured products">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/components/Header.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/components/ProductListing.java" afterDir="false" />
+    <list default="true" id="08d4867c-0e83-42ae-976e-df3fbef8ade2" name="Changes" comment="extract product and header to its own component">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/ChromeDriverManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/DriverManagerFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/FirefoxDriverManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/StorePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/pages/StorePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/constants/BrowserType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/constants/DriverType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/DriverManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/AddToCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/AddToCartTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/BasicTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/BasicTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/NavigationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/tests/NavigationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +24,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -48,20 +49,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/dni9/Projects/java/SeleniumAutomationFramework",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/dni9/Projects/java/SeleniumAutomationFramework&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.dni9.pom.pages" />
@@ -223,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673030101371</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="extract product and header to its own component">
+      <created>1673031584102</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673031584102</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -251,7 +259,8 @@
     <MESSAGE value="parallel execution with testng" />
     <MESSAGE value="add CheckoutTest" />
     <MESSAGE value="use data provider to add featured products" />
-    <option name="LAST_COMMIT_MESSAGE" value="use data provider to add featured products" />
+    <MESSAGE value="extract product and header to its own component" />
+    <option name="LAST_COMMIT_MESSAGE" value="extract product and header to its own component" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

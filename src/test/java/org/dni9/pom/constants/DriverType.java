@@ -1,6 +1,6 @@
 package org.dni9.pom.constants;
 
-public enum BrowserType {
+public enum DriverType {
   CHROME,
   FIREFOX
 }

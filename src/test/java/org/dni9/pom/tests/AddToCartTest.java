@@ -34,6 +34,4 @@ public class AddToCartTest extends BaseTest {
         .openCartPage();
     Assert.assertEquals(cartPage.getProductName(), product.getName());
   }
-
-
 }
