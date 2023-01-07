@@ -15,7 +15,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
+import javax.imageio.ImageIO;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -49,7 +53,7 @@ public class BaseTest {
           + result.getTestClass().getRealClass().getSimpleName() + "_"
           + result.getMethod().getMethodName() + ".png";
       File destFile = new File(filePath);
-      takeScreenshot(destFile);
+      takeFullScreenshot(destFile);
     }
     getDriver().quit();
   }
@@ -62,5 +66,10 @@ public class BaseTest {
   private void takeScreenshot(File destFile) throws IOException {
     File srcFile = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
     FileUtils.copyFile(srcFile, destFile);
+  }
+
+  private void takeFullScreenshot(File destfile) throws IOException {
+    Screenshot screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(getDriver());
+    ImageIO.write(screenshot.getImage(), "PNG", destfile);
   }
 }
