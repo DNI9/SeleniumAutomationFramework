@@ -13,7 +13,12 @@ public class ChromeDriverManager implements DriverManager {
 
     ChromeOptions options = new ChromeOptions();
     if (EnvUtils.isCIServer()) {
-      options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
+      options.addArguments(
+          "--headless",
+          "--no-sandbox",
+          "--disable-dev-shm-usage",
+          "--window-size=1920,1080"
+      );
     }
 
     WebDriver driver = new ChromeDriver(options);
