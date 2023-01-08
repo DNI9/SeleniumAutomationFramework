@@ -23,11 +23,11 @@ public class SignUpApi {
   private Response getAccount() {
     Response response = given().
         baseUri(ConfigLoader.getInstance().getConfig("baseUrl"))
-        .log().all()
+//        .log().all()
         .when()
         .get("/account")
         .then()
-        .log().all()
+//        .log().all()
         .extract()
         .response();
 
@@ -56,11 +56,11 @@ public class SignUpApi {
         .headers(headers)
         .formParams(formParams)
         .cookies(cookies)
-        .log().all()
+//        .log().all()
         .when()
         .post("/account")
         .then()
-        .log().all()
+//        .log().all()
         .extract()
         .response();
 
