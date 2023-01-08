@@ -2,16 +2,18 @@
 
 Selenium testing framework with reporting and automated testing with GitHub actions
 
+![Allure report screenshot](allure-report.png)
+
 # Run locally
 
- Run test with chrome (default) browser
+Run test with chrome (default) browser
 
 ```bash
 mvn clean test
 ```
 
- Run tests with firefox browser
- 
+Run tests with firefox browser
+
  ```bash
 mvn clean test -Dbrowser=FIREFOX
 ```
@@ -24,7 +26,8 @@ allure serve target/allure-results
 
 # Run on CI server
 
-> Github actions is already setup to run on every push, check [actions tab](https://github.com/DNI9/SeleniumAutomationFramework/actions).
+> Github actions is already setup to run on every push,
+> check [actions tab](https://github.com/DNI9/SeleniumAutomationFramework/actions).
 
 Pass the `CI` flag to run in headless mode
 
