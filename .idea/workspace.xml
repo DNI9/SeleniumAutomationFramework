@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="08d4867c-0e83-42ae-976e-df3fbef8ade2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/ChromeDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/ChromeDriverManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/stg_config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/stg_config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,24 +46,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/dni9/Projects/java/SeleniumAutomationFramework/allure-report.png&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/dni9/IdeaProjects/SeleniumAutomationFramework",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "preferences.keymap"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
     ]
   }
-}</component>
+}]]></component>
   <component name="Push.Settings">
     <option name="SHOW_DETAILS_PANEL" value="false" />
   </component>
@@ -74,20 +76,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.BasicTest.guestCheckoutUsingDirectBankTransfer">
-    <configuration name="AddToCartTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.dni9.pom.tests.AddToCartTest" />
-      <module name="SeleniumAutomationFramework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.dni9.pom.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.AddToCartTest.addToCartFromStorePage">
     <configuration name="AddToCartTest.addFeaturedProductsToCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumAutomationFramework" />
       <extension name="coverage">
@@ -99,6 +88,24 @@
       <option name="PACKAGE_NAME" value="org.dni9.pom.tests" />
       <option name="MAIN_CLASS_NAME" value="org.dni9.pom.tests.AddToCartTest" />
       <option name="METHOD_NAME" value="addFeaturedProductsToCart" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddToCartTest.addToCartFromStorePage" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SeleniumAutomationFramework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dni9.pom.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.dni9.pom.tests" />
+      <option name="MAIN_CLASS_NAME" value="org.dni9.pom.tests.AddToCartTest" />
+      <option name="METHOD_NAME" value="addToCartFromStorePage" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -153,7 +160,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.AddToCartTest" />
+      <item itemvalue="TestNG.AddToCartTest.addToCartFromStorePage" />
       <item itemvalue="TestNG.BasicTest.failTest" />
       <item itemvalue="TestNG.BasicTest.guestCheckoutUsingDirectBankTransfer" />
       <item itemvalue="TestNG.AddToCartTest.addFeaturedProductsToCart" />
@@ -161,11 +168,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AddToCartTest.addToCartFromStorePage" />
+        <item itemvalue="TestNG.AddToCartTest.addFeaturedProductsToCart" />
         <item itemvalue="TestNG.BasicTest.guestCheckoutUsingDirectBankTransfer" />
         <item itemvalue="TestNG.BasicTest.failTest" />
         <item itemvalue="TestNG./home/dni9/Projects/java/SeleniumAutomationFramework/testng.xml" />
-        <item itemvalue="TestNG.AddToCartTest.addFeaturedProductsToCart" />
-        <item itemvalue="Application.AddToCartTest" />
       </list>
     </recent_temporary>
   </component>
@@ -294,21 +301,6 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -320,6 +312,21 @@
                 </option>
               </RecentGroup>
             </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -344,6 +351,17 @@
     <MESSAGE value="add script to download browsers" />
     <MESSAGE value="add window size argument for chrome driver" />
     <option name="LAST_COMMIT_MESSAGE" value="add window size argument for chrome driver" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/ChromeDriverManager.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
