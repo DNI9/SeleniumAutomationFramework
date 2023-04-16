@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="08d4867c-0e83-42ae-976e-df3fbef8ade2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/ChromeDriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/ChromeDriverManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/stg_config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/stg_config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,25 +45,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/dni9/IdeaProjects/SeleniumAutomationFramework",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/dni9/IdeaProjects/SeleniumAutomationFramework&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+    ],
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Groovy&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <option name="SHOW_DETAILS_PANEL" value="false" />
   </component>
@@ -76,7 +78,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AddToCartTest.addToCartFromStorePage">
+  <component name="RunManager" selected="TestNG./home/dni9/Projects/java/SeleniumAutomationFramework/testng.xml">
     <configuration name="AddToCartTest.addFeaturedProductsToCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SeleniumAutomationFramework" />
       <extension name="coverage">
@@ -168,11 +170,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG./home/dni9/Projects/java/SeleniumAutomationFramework/testng.xml" />
         <item itemvalue="TestNG.AddToCartTest.addToCartFromStorePage" />
         <item itemvalue="TestNG.AddToCartTest.addFeaturedProductsToCart" />
         <item itemvalue="TestNG.BasicTest.guestCheckoutUsingDirectBankTransfer" />
         <item itemvalue="TestNG.BasicTest.failTest" />
-        <item itemvalue="TestNG./home/dni9/Projects/java/SeleniumAutomationFramework/testng.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -297,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673195701273</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add driver version to config">
+      <created>1681064631832</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681064631832</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -350,18 +359,8 @@
     <MESSAGE value="add option to run test in CI" />
     <MESSAGE value="add script to download browsers" />
     <MESSAGE value="add window size argument for chrome driver" />
-    <option name="LAST_COMMIT_MESSAGE" value="add window size argument for chrome driver" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/dni9/pom/factory/ChromeDriverManager.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add driver version to config" />
+    <option name="LAST_COMMIT_MESSAGE" value="add driver version to config" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
