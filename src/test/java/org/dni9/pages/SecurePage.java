@@ -1,8 +1,10 @@
 package org.dni9.pages;
 
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+@Slf4j
 public class SecurePage extends BasePage {
 
   @FindBy(id = "flash")
@@ -20,6 +22,7 @@ public class SecurePage extends BasePage {
   }
 
   public void logOut() {
+    log.info("Logging out");
     linkLogout.click();
   }
 }

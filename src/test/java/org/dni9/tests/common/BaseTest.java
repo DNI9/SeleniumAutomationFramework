@@ -1,5 +1,6 @@
 package org.dni9.tests.common;
 
+import lombok.extern.slf4j.Slf4j;
 import org.dni9.pages.LoginPage;
 import org.dni9.pages.SecurePage;
 import org.dni9.tests.utils.ConfigReader;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+@Slf4j
 public class BaseTest {
 
   private static final ConfigReader configReader = new ConfigReader();
@@ -19,12 +21,15 @@ public class BaseTest {
   @BeforeMethod
   public void setup() {
     var driver = DriverFactory.getInstance().getDriver();
-    driver.get(configReader.getBaseUrl());
+    String baseUrl = configReader.getBaseUrl();
+    log.info("Opening {}", baseUrl);
+    driver.get(baseUrl);
     initializePageObjects(driver);
   }
 
   @AfterMethod(alwaysRun = true)
   public void tearDown() {
+    log.info("Quiting browser");
     DriverFactory.getInstance().quitDriver();
   }
 

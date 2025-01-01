@@ -13,6 +13,7 @@ public class JsonUtils {
 
   public static <T> T readJson(String fileName, Class<T> clazz) {
     try {
+      log.info("Reading test data: {}.json", fileName);
       return objectMapper.readValue(new File("src/test/resources/data/" + fileName + ".json"), clazz);
     } catch (IOException e) {
       log.error("Unable to find test data with file name: {}", fileName);
