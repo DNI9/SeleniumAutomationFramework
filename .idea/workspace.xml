@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00d26e3f-881a-439e-8b01-0ae306bdb8da" name="Changes" comment="add support for multiple application">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/base/BookStoreBaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/data/bookstore/SignInData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pages/bookstore/ProfilePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pages/bookstore/SignInPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/tests/bookstore/SignInTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data/bookstore/signIn.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/base/TheInternetBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/base/TheInternetBaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/data/LoginData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/data/theinternet/LoginData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pages/theinternet/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pages/SecurePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pages/theinternet/SecurePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/tests/LoginPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/tests/theinternet/LoginPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/data/login.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/theinternet/login.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/suites/all.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG./home/dni9/IdeaProjects/modern-automation-framework/src/test/resources/suites/all.xml.executor": "Run",
     "TestNG.LoginPageTest.testLoginPage.executor": "Run",
     "TestNG.SeleniumTest.testGoogleTitle.executor": "Run",
     "TestNG.SignInTest.testSignIn.executor": "Run",
@@ -92,7 +80,7 @@
       <recent name="org.dni9.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SignInTest.testSignIn">
+  <component name="RunManager" selected="TestNG./home/dni9/IdeaProjects/modern-automation-framework/src/test/resources/suites/all.xml">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.dni9.Main" />
       <module name="modern-automation-framework" />
@@ -160,8 +148,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="/home/dni9/IdeaProjects/modern-automation-framework/src/test/resources/suites/all.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="modern-automation-framework" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/suites/all.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG./home/dni9/IdeaProjects/modern-automation-framework/src/test/resources/suites/all.xml" />
         <item itemvalue="TestNG.SignInTest.testSignIn" />
         <item itemvalue="TestNG.LoginPageTest.testLoginPage" />
         <item itemvalue="Application.Main" />
