@@ -4,18 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00d26e3f-881a-439e-8b01-0ae306bdb8da" name="Changes" comment="update gitignore">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/base/TheInternetBaseTest.java" afterDir="false" />
+    <list default="true" id="00d26e3f-881a-439e-8b01-0ae306bdb8da" name="Changes" comment="add support for multiple application">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/base/BookStoreBaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/data/bookstore/SignInData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pages/bookstore/ProfilePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pages/bookstore/SignInPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/tests/bookstore/SignInTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/data/bookstore/signIn.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/base/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pages/FillablePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/base/FillablePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pages/SecurePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pages/SecurePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/tests/LoginPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/tests/LoginPageTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/tests/common/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/tests/utils/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/utils/ConfigReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/tests/utils/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/utils/DriverFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/base/TheInternetBaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/base/TheInternetBaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/data/LoginData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/data/theinternet/LoginData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pages/theinternet/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pages/SecurePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pages/theinternet/SecurePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/tests/LoginPageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/tests/theinternet/LoginPageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/data/login.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/data/theinternet/login.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -55,34 +58,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;TestNG.LoginPageTest.testLoginPage.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.SeleniumTest.testGoogleTitle.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/dni9/IdeaProjects/modern-automation-framework/src/test&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.LoginPageTest.testLoginPage.executor": "Run",
+    "TestNG.SeleniumTest.testGoogleTitle.executor": "Run",
+    "TestNG.SignInTest.testSignIn.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/dni9/IdeaProjects/modern-automation-framework/src/test",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "rearrange.code.on.save": "true",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test" />
       <recent name="$PROJECT_DIR$/src/test/java" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/data/theinternet" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.dni9.data.bookstore" />
+      <recent name="org.dni9.pages.bookstore" />
+      <recent name="org.dni9.base" />
       <recent name="org.dni9.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginPageTest.testLoginPage">
+  <component name="RunManager" selected="TestNG.SignInTest.testSignIn">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.dni9.Main" />
       <module name="modern-automation-framework" />
@@ -100,12 +110,12 @@
       <module name="modern-automation-framework" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.dni9.tests.*" />
+          <option name="PATTERN" value="org.dni9.tests.theinternet.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.dni9.tests" />
-      <option name="MAIN_CLASS_NAME" value="org.dni9.tests.LoginPageTest" />
+      <option name="MAIN_CLASS_NAME" value="org.dni9.tests.theinternet.LoginPageTest" />
       <option name="METHOD_NAME" value="testLoginPage" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
@@ -132,8 +142,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SignInTest.testSignIn" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="modern-automation-framework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.dni9.tests.bookstore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.dni9.tests.bookstore" />
+      <option name="MAIN_CLASS_NAME" value="org.dni9.tests.bookstore.SignInTest" />
+      <option name="METHOD_NAME" value="testSignIn" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SignInTest.testSignIn" />
         <item itemvalue="TestNG.LoginPageTest.testLoginPage" />
         <item itemvalue="Application.Main" />
         <item itemvalue="TestNG.SeleniumTest.testGoogleTitle" />
@@ -173,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735763871165</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add support for multiple application">
+      <option name="closed" value="true" />
+      <created>1735894245564</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1735894245564</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -193,6 +230,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="update gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="update gitignore" />
+    <MESSAGE value="add support for multiple application" />
+    <option name="LAST_COMMIT_MESSAGE" value="add support for multiple application" />
   </component>
 </project>

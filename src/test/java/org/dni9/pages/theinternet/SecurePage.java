@@ -1,4 +1,4 @@
-package org.dni9.pages;
+package org.dni9.pages.theinternet;
 
 import lombok.extern.slf4j.Slf4j;
 import org.dni9.base.BasePage;
