@@ -2,6 +2,7 @@ package org.dni9.pages.theinternet;
 
 import lombok.extern.slf4j.Slf4j;
 import org.dni9.base.BasePage;
+import org.dni9.utils.LogUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -23,7 +24,7 @@ public class SecurePage extends BasePage {
   }
 
   public void logOut() {
-    log.info("Logging out");
+    LogUtils.infoPassWithScreenshot("Logging out");
     linkLogout.click();
   }
 }

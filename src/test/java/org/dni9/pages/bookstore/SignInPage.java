@@ -3,6 +3,7 @@ package org.dni9.pages.bookstore;
 import lombok.extern.slf4j.Slf4j;
 import org.dni9.base.FillablePage;
 import org.dni9.data.bookstore.SignInData;
+import org.dni9.utils.LogUtils;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -21,15 +22,15 @@ public class SignInPage extends FillablePage<SignInData> {
 
   @Override
   public void navigateTo() {
-    log.info("Navigating to sign in page");
+    LogUtils.infoPassWithScreenshot("Navigating to sign in page");
     linkSignIn.click();
   }
 
   @Override
   public void fill(SignInData signInData) {
-    log.info("Filling sign in page");
     enterData(txtEmail, signInData.getUsername());
     enterData(txtPassword, signInData.getPassword());
+    LogUtils.infoPassWithScreenshot("Filling sign in page");
     txtPassword.sendKeys(Keys.ENTER);
   }
 

@@ -2,6 +2,7 @@ package org.dni9.pages.bookstore;
 
 import lombok.extern.slf4j.Slf4j;
 import org.dni9.base.BasePage;
+import org.dni9.utils.LogUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -19,7 +20,7 @@ public class ProfilePage extends BasePage {
 
   @Override
   public void navigateTo() {
-    log.info("navigating to profile page");
+    LogUtils.infoPassWithScreenshot("navigating to profile page");
     btnProfileDropDown.click();
     linkProfile.click();
   }

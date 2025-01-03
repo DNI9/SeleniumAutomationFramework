@@ -4,8 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00d26e3f-881a-439e-8b01-0ae306bdb8da" name="Changes" comment="add support for multiple application">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/suites/all.xml" afterDir="false" />
+    <list default="true" id="00d26e3f-881a-439e-8b01-0ae306bdb8da" name="Changes" comment="add testng suite">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/utils/ExtentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/utils/ExtentTestNGITestListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/utils/LogUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/dni9/utils/ScreenshotUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pages/bookstore/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pages/bookstore/ProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pages/bookstore/SignInPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pages/bookstore/SignInPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pages/theinternet/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pages/theinternet/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/pages/theinternet/SecurePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/pages/theinternet/SecurePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/tests/bookstore/SignInTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/tests/bookstore/SignInTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,6 +241,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="update gitignore" />
     <MESSAGE value="add support for multiple application" />
-    <option name="LAST_COMMIT_MESSAGE" value="add support for multiple application" />
+    <MESSAGE value="add testng suite" />
+    <option name="LAST_COMMIT_MESSAGE" value="add testng suite" />
   </component>
 </project>
