@@ -1,6 +1,7 @@
 package org.dni9.pages;
 
 import lombok.extern.slf4j.Slf4j;
+import org.dni9.base.FillablePage;
 import org.dni9.data.LoginData;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;

@@ -1,6 +1,7 @@
 package org.dni9.pages;
 
 import lombok.extern.slf4j.Slf4j;
+import org.dni9.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 

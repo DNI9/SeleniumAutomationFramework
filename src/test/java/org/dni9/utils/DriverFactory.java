@@ -1,4 +1,4 @@
-package org.dni9.tests.utils;
+package org.dni9.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

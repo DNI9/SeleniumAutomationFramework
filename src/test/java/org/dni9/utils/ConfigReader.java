@@ -1,4 +1,4 @@
-package org.dni9.tests.utils;
+package org.dni9.utils;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -27,10 +27,6 @@ public class ConfigReader {
 
   public String getProperty(String key, String defaultValue) {
     return properties.getProperty(key, defaultValue);
-  }
-
-  public String getBaseUrl() {
-    return properties.getProperty("baseUrl");
   }
 
   public String getBrowser() {

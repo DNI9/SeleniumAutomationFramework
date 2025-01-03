@@ -1,4 +1,4 @@
-package org.dni9.pages;
+package org.dni9.base;
 
 import org.openqa.selenium.WebElement;
 

@@ -1,11 +1,11 @@
 package org.dni9.tests;
 
+import org.dni9.base.TheInternetBaseTest;
 import org.dni9.data.LoginData;
-import org.dni9.tests.common.BaseTest;
 import org.dni9.utils.JsonUtils;
 import org.testng.annotations.Test;
 
-public class LoginPageTest extends BaseTest {
+public class LoginPageTest extends TheInternetBaseTest {
 
   @Test
   public void testLoginPage() {
