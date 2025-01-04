@@ -19,13 +19,14 @@ public abstract class BaseTest {
 
   protected abstract void initializePageObjects(WebDriver driver);
 
-  protected abstract void openUrl();
-
   protected abstract String getAppName();
 
   @BeforeMethod
   public synchronized void setup() {
-    openUrl();
+    WebDriver driver = getDriver();
+    if (!DriverFactory.isExistingSessionActive()) {
+      openUrl(driver);
+    }
     initializePageObjects(getDriver());
   }
 
@@ -41,5 +42,15 @@ public abstract class BaseTest {
 
   protected <T extends TestData> T getData(String fileName, Class<T> clazz) {
     return JsonUtils.readJson("%s/%s".formatted(getAppName(), fileName), clazz);
+  }
+
+  private void openUrl(WebDriver driver) {
+    String baseUrl = switch (getAppName()) {
+      case "theinternet" -> configReader.getProperty("theInternetUrl");
+      case "bookstore" -> configReader.getProperty("bookstoreUrl");
+      default -> throw new IllegalArgumentException("App url is required");
+    };
+    log.info("Opening {}", baseUrl);
+    driver.get(baseUrl);
   }
 }

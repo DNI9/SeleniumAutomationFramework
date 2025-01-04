@@ -24,11 +24,4 @@ public class TheInternetBaseTest extends BaseTest {
     loginPage = PageFactory.initElements(driver, LoginPage.class);
     securePage = PageFactory.initElements(driver, SecurePage.class);
   }
-
-  @Override
-  protected void openUrl() {
-    String baseUrl = configReader.getProperty("theInternetUrl");
-    log.info("Opening {}", baseUrl);
-    getDriver().get(baseUrl);
-  }
 }

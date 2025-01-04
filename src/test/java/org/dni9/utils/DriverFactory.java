@@ -1,5 +1,7 @@
 package org.dni9.utils;
 
+import lombok.extern.slf4j.Slf4j;
+import org.openqa.selenium.SessionNotCreatedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -7,11 +9,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.time.Duration;
+import java.util.List;
 
+@Slf4j
 public class DriverFactory {
+  private static final String CHROME_DEBUG_PORT = "9222";
 
   private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
   private static final ConfigReader configReader = new ConfigReader();
+  private final List<String> chromeArgs = List.of("--disable-gpu", "--ignore-certificate-errors", "--no-sandbox", "--disable-dev-shm-usage", "--disable-extensions", "--disable-popup-blocking", "--start-maximized", "--incognito", "--window-size=1920,1080", "--disable-infobars", "--disable-notifications");
 
   private DriverFactory() {
     // Private constructor to prevent instantiation
@@ -19,6 +25,11 @@ public class DriverFactory {
 
   public static DriverFactory getInstance() {
     return InstanceHolder.instance;
+  }
+
+  public static boolean isExistingSessionActive() {
+    String currentUrl = driver.get().getCurrentUrl();
+    return currentUrl != null && !currentUrl.contains("data");
   }
 
   public WebDriver getDriver() {
@@ -30,7 +41,7 @@ public class DriverFactory {
 
   public void quitDriver() {
     if (driver.get() != null) {
-      if (configReader.getProperty("closeBrowserOnFinish", "true").equals("true")) {
+      if (!configReader.shouldSaveSession()) {
         driver.get().quit();
       }
       driver.remove();
@@ -41,23 +52,16 @@ public class DriverFactory {
     WebDriver driver;
     switch (browser) {
       case "chrome" -> {
-        var chromeOptions = new ChromeOptions();
-        if (configReader.isHeadless()) {
-          chromeOptions.addArguments("--headless");
+        try {
+          if (configReader.shouldReconnectSession()) {
+            driver = new ChromeDriver(getChromeOptions(true));
+          } else {
+            driver = new ChromeDriver(getChromeOptions(false));
+          }
+        } catch (SessionNotCreatedException ex) {
+          log.warn("failed to reconnect to existing browser, opening new browser session");
+          driver = new ChromeDriver(getChromeOptions(false));
         }
-        chromeOptions.addArguments(
-            "--disable-gpu",
-            "--ignore-certificate-errors",
-            "--no-sandbox",
-            "--disable-extensions",
-            "--disable-popup-blocking",
-            "--start-maximized",
-            "--incognito",
-            "--window-size=1920,1080",
-            "--disable-infobars",
-            "--disable-notifications"
-        );
-        driver = new ChromeDriver(chromeOptions);
       }
       case "firefox" -> {
         var firefoxOptions = new FirefoxOptions();
@@ -76,6 +80,22 @@ public class DriverFactory {
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(configReader.getImplicitWait()));
 
     return driver;
+  }
+
+  private ChromeOptions getChromeOptions(boolean includeDebuggerAddress) {
+    var chromeOptions = new ChromeOptions();
+    if (configReader.isHeadless()) {
+      chromeOptions.addArguments("--headless");
+    }
+    chromeOptions.addArguments(chromeArgs);
+    if (configReader.shouldSaveSession()) {
+      chromeOptions.addArguments("--remote-debugging-port=" + CHROME_DEBUG_PORT);
+    }
+    if (includeDebuggerAddress) {
+      chromeOptions.setExperimentalOption("debuggerAddress", "127.0.0.1:" + CHROME_DEBUG_PORT);
+    }
+//    chromeOptions.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+    return chromeOptions;
   }
 
   private static final class InstanceHolder {

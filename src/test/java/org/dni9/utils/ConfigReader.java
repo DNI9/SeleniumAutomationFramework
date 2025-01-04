@@ -40,4 +40,12 @@ public class ConfigReader {
   public int getImplicitWait() {
     return Integer.parseInt(getProperty("implicitWait", "10"));
   }
+
+  public boolean shouldReconnectSession() {
+    return "true".equals(getProperty("reconnectSession"));
+  }
+
+  public boolean shouldSaveSession() {
+    return "true".equals(getProperty("saveSession"));
+  }
 }

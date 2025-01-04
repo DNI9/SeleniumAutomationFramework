@@ -21,13 +21,6 @@ public class BookStoreBaseTest extends BaseTest {
   }
 
   @Override
-  protected void openUrl() {
-    String baseUrl = configReader.getProperty("bookstoreUrl");
-    log.info("Opening {}", baseUrl);
-    getDriver().get(baseUrl);
-  }
-
-  @Override
   public String getAppName() {
     return APP_NAME;
   }
