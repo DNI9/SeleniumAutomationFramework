@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite verbose="1" name="Bookstore Tests" thread-count="2" parallel="tests">
+    <test name="Sign In Tests" parallel="methods">
+        <classes>
+            <class name="org.dni9.tests.bookstore.SignInTest"/>
+        </classes>
+    </test>
+</suite>

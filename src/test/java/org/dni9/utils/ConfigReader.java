@@ -3,6 +3,7 @@ package org.dni9.utils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -25,6 +26,8 @@ public class ConfigReader {
             Properties localProperties = new Properties();
             localProperties.load(fis);
             properties.putAll(localProperties); // override
+        } catch (FileNotFoundException ex) {
+            log.warn("local.properties file not found");
         } catch (IOException e) {
             log.error("Failed to load local properties");
             throw new RuntimeException(e);
@@ -44,7 +47,7 @@ public class ConfigReader {
     }
 
     public boolean isHeadless() {
-        return Boolean.parseBoolean(properties.getProperty("headless"));
+        return Boolean.parseBoolean(System.getProperty("headless")) || Boolean.parseBoolean(properties.getProperty("headless"));
     }
 
     public int getImplicitWait() {

@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00d26e3f-881a-439e-8b01-0ae306bdb8da" name="Changes" comment="development only config">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/local.properties" afterDir="false" />
+    <list default="true" id="00d26e3f-881a-439e-8b01-0ae306bdb8da" name="Changes" comment="override with local config">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/suites/bookstore-tests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/utils/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/utils/ConfigReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,25 +63,28 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Maven.modern-automation-framework [org.apache.maven.plugins:maven-surefire-plugin:3.5.0:help].executor": "Run",
+    "Maven.modern-automation-framework [org.apache.maven.plugins:maven-surefire-plugin:3.5.0:test].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG./home/dni9/IdeaProjects/modern-automation-framework/src/test/resources/suites/all.xml.executor": "Run",
-    "TestNG.LoginPageTest.testLoginPage.executor": "Debug",
+    "TestNG.LoginPageTest.testLoginPage.executor": "Run",
     "TestNG.SeleniumTest.testGoogleTitle.executor": "Run",
     "TestNG.SignInTest.testSignIn.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/dni9/Projects/SeleniumAutomationFramework/src/test/resources",
+    "last_opened_file_path": "/home/dni9/Projects/SeleniumAutomationFramework/src/test/resources/suites",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+    "settings.editor.selected.configurable": "actions.on.save"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/suites" />
       <recent name="$PROJECT_DIR$/src/test/resources" />
       <recent name="$PROJECT_DIR$/src/test" />
       <recent name="$PROJECT_DIR$/src/test/java" />
@@ -241,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1736069222199</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="override with local config">
+      <option name="closed" value="true" />
+      <created>1736070998866</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1736070998866</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -264,14 +275,15 @@
     <MESSAGE value="add support for multiple application" />
     <MESSAGE value="add testng suite" />
     <MESSAGE value="development only config" />
-    <option name="LAST_COMMIT_MESSAGE" value="development only config" />
+    <MESSAGE value="override with local config" />
+    <option name="LAST_COMMIT_MESSAGE" value="override with local config" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/dni9/utils/ConfigReader.java</url>
-          <line>14</line>
+          <line>15</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
