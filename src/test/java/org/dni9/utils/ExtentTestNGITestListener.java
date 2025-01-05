@@ -24,19 +24,19 @@ public class ExtentTestNGITestListener implements ITestListener {
 
   @Override
   public void onTestSuccess(ITestResult result) {
-    String ssPath = ScreenshotUtils.captureScreenshot(result.getMethod().getMethodName());
-    ExtentManager.getTest().pass("Test Passed", MediaEntityBuilder.createScreenCaptureFromPath(ssPath).build());
+    String path = ScreenshotUtils.captureScreenshot(result.getMethod().getMethodName() + "_passed");
+    ExtentManager.getTest().pass("Test Passed", MediaEntityBuilder.createScreenCaptureFromPath(path).build());
   }
 
   @Override
   public void onTestFailure(ITestResult result) {
-    String ssPath = ScreenshotUtils.captureScreenshot(result.getMethod().getMethodName());
-    ExtentManager.getTest().fail(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromPath(ssPath).build());
+    String path = ScreenshotUtils.captureScreenshot(result.getMethod().getMethodName() + "_failed");
+    ExtentManager.getTest().fail(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromPath(path).build());
   }
 
   @Override
   public void onTestSkipped(ITestResult result) {
-    String ssPath = ScreenshotUtils.captureScreenshot(result.getMethod().getMethodName());
-    ExtentManager.getTest().skip("Test Skipped", MediaEntityBuilder.createScreenCaptureFromPath(ssPath).build());
+    String path = ScreenshotUtils.captureScreenshot(result.getMethod().getMethodName() + "_skipped");
+    ExtentManager.getTest().skip("Test Skipped", MediaEntityBuilder.createScreenCaptureFromPath(path).build());
   }
 }

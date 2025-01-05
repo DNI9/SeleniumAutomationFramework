@@ -4,11 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00d26e3f-881a-439e-8b01-0ae306bdb8da" name="Changes" comment="run tests from cli" />
+    <list default="true" id="00d26e3f-881a-439e-8b01-0ae306bdb8da" name="Changes" comment="run tests from cli">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/utils/ExtentTestNGITestListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/utils/ExtentTestNGITestListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/utils/LogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/utils/LogUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/utils/ScreenshotUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/utils/ScreenshotUtils.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -25,18 +34,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "DNI9"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DNI9&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:DNI9/SeleniumAutomationFramework.git",
-    "accountId": "7b925190-5401-4869-bd8d-fd50046f3c45"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:DNI9/SeleniumAutomationFramework.git&quot;,
+    &quot;accountId&quot;: &quot;7b925190-5401-4869-bd8d-fd50046f3c45&quot;
   }
-}]]></component>
+}</component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
@@ -59,6 +68,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Maven.modern-automation-framework [clean,test...].executor": "Run",
+    "Maven.modern-automation-framework [clean].executor": "Run",
     "Maven.modern-automation-framework [install...].executor": "Run",
     "Maven.modern-automation-framework [install].executor": "Run",
     "Maven.modern-automation-framework [org.apache.maven.plugins:maven-surefire-plugin:3.5.0:help].executor": "Run",
@@ -77,7 +87,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "rearrange.code.on.save": "true",
-    "settings.editor.selected.configurable": "actions.on.save"
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -97,7 +107,7 @@
       <recent name="org.dni9.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginPageTest.testLoginPage">
+  <component name="RunManager" selected="TestNG.SignInTest.testSignIn">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.dni9.Main" />
       <module name="modern-automation-framework" />
@@ -177,9 +187,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SignInTest.testSignIn" />
         <item itemvalue="TestNG.LoginPageTest.testLoginPage" />
         <item itemvalue="TestNG./home/dni9/IdeaProjects/modern-automation-framework/src/test/resources/suites/all.xml" />
-        <item itemvalue="TestNG.SignInTest.testSignIn" />
         <item itemvalue="Application.Main" />
         <item itemvalue="TestNG.SeleniumTest.testGoogleTitle" />
       </list>
@@ -292,16 +302,5 @@
     <MESSAGE value="override with local config" />
     <MESSAGE value="run tests from cli" />
     <option name="LAST_COMMIT_MESSAGE" value="run tests from cli" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/org/dni9/utils/ConfigReader.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

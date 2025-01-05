@@ -13,7 +13,7 @@ public class LogUtils {
 
   public static void infoPassWithScreenshot(String msg) {
     log.info(msg);
-    String ssPath = ScreenshotUtils.captureScreenshot(msg.toLowerCase().replaceAll(" ", "-"));
-    ExtentManager.getTest().pass(msg, MediaEntityBuilder.createScreenCaptureFromPath(ssPath).build());
+    String path = ScreenshotUtils.captureScreenshot(msg);
+    ExtentManager.getTest().pass(msg, MediaEntityBuilder.createScreenCaptureFromPath(path).build());
   }
 }
