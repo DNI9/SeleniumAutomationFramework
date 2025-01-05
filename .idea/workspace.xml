@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00d26e3f-881a-439e-8b01-0ae306bdb8da" name="Changes" comment="override with local config">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/suites/bookstore-tests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/dni9/utils/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/dni9/utils/ConfigReader.java" afterDir="false" />
-    </list>
+    <list default="true" id="00d26e3f-881a-439e-8b01-0ae306bdb8da" name="Changes" comment="run tests from cli" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +58,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Maven.modern-automation-framework [clean,test...].executor": "Run",
+    "Maven.modern-automation-framework [install...].executor": "Run",
+    "Maven.modern-automation-framework [install].executor": "Run",
     "Maven.modern-automation-framework [org.apache.maven.plugins:maven-surefire-plugin:3.5.0:help].executor": "Run",
     "Maven.modern-automation-framework [org.apache.maven.plugins:maven-surefire-plugin:3.5.0:test].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -252,7 +250,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736070998866</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="run tests from cli">
+      <option name="closed" value="true" />
+      <created>1736072480496</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1736072480496</updated>
+    </task>
+    <task id="LOCAL-00009" summary="run tests from cli">
+      <option name="closed" value="true" />
+      <created>1736072749521</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1736072749521</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -276,7 +290,8 @@
     <MESSAGE value="add testng suite" />
     <MESSAGE value="development only config" />
     <MESSAGE value="override with local config" />
-    <option name="LAST_COMMIT_MESSAGE" value="override with local config" />
+    <MESSAGE value="run tests from cli" />
+    <option name="LAST_COMMIT_MESSAGE" value="run tests from cli" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
