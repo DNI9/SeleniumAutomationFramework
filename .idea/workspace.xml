@@ -87,7 +87,7 @@
       <recent name="org.dni9.pages" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LoginPageTest.testLoginPage">
+  <component name="RunManager" selected="TestNG./home/dni9/IdeaProjects/modern-automation-framework/src/test/resources/suites/all.xml">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.dni9.Main" />
       <module name="modern-automation-framework" />
@@ -167,8 +167,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LoginPageTest.testLoginPage" />
         <item itemvalue="TestNG./home/dni9/IdeaProjects/modern-automation-framework/src/test/resources/suites/all.xml" />
+        <item itemvalue="TestNG.LoginPageTest.testLoginPage" />
         <item itemvalue="TestNG.SignInTest.testSignIn" />
         <item itemvalue="Application.Main" />
         <item itemvalue="TestNG.SeleniumTest.testGoogleTitle" />
